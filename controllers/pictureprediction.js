@@ -44,7 +44,8 @@ module.exports = function(_,formidable){
                
               PythonShell.run('/image_emotion_gender.py', options, function (err, results) {
                 console.log("python");
-                if(err,res) {return res.render('error');}
+                if(err) {console.log(err);
+                }
                 // results is an array consisting of messages collected during execution
                 console.log('results: %j', results);
                 res.render('picture', { data: results,file:  file.name  });
