@@ -24,7 +24,7 @@ class Predict:
         model_name = 'Emotion_Voice_Detection_Model.h5'
         self.graph = tf.get_default_graph()
         BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-        path=(os.path.join(BASE_DIR,"controllers\models"))
+        path=(os.path.join(BASE_DIR,"controllers/models"))
         #print(path)
         self.loaded_model = keras.models.load_model((os.path.join(path,'Emotion_Voice_Detection_Model.h5')))
         global graph
