@@ -1,0 +1,13 @@
+requests==2.21.0
+Keras==2.2.4
+Keras-Applications==1.0.6
+Keras-Preprocessing==1.0.5
+librosa==0.6.2
+numpy==1.16.0
+pandas==0.24.2
+pytest==4.0.1
+tensorflow==1.13.1
+psycopg2==2.8.3
+opencv-python
+matplotlib.pyplot
+scipy
