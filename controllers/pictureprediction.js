@@ -29,7 +29,8 @@ module.exports = function(_,formidable){
               fs.rename(file.path, path.join(form.uploadDir, file.name), (err) => {
                 console.log("renamed");
                 console.log(file.name);
-              if(err,res) {return res.render('error');}
+              if(err,res) {  console.log(err);
+              return res.render('error');}
              
               
 
