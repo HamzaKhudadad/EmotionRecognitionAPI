@@ -9,6 +9,5 @@ pytest==4.0.1
 tensorflow==1.13.1
 psycopg2==2.8.3
 opencv-python
-scipy
-scipy.misc.pilutils
+scipy==1.1.0
 matplotlib
