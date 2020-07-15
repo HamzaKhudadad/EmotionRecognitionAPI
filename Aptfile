@@ -10,3 +10,7 @@ tensorflow==1.13.1
 psycopg2==2.8.3
 opencv-python
 scipy
+libsm6
+libxrender1
+libfontconfig1
+libice6
