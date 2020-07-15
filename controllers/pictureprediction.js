@@ -28,13 +28,13 @@ module.exports = function(_,formidable){
             form.on('file',(field, file) => {
               fs.rename(file.path, path.join(form.uploadDir, file.name), (err) => {
                 console.log("renamed");
+                console.log(file.name);
               if(err,res) {return res.render('error');}
              
               
 
               let options = {
                 mode: 'text',
-               
                 pythonOptions: ['-u'], // get print results in real-time
                 scriptPath: __dirname,
                 args: [file.name]
@@ -42,6 +42,7 @@ module.exports = function(_,formidable){
               };
                
               PythonShell.run('/image_emotion_gender.py', options, function (err, results) {
+                console.log("python");
                 if(err,res) {return res.render('error');}
                 // results is an array consisting of messages collected during execution
                 console.log('results: %j', results);
@@ -57,6 +58,7 @@ module.exports = function(_,formidable){
           })
 
             form.on('error', (err,res) => {
+              console.log("form error");
               return res.render('error');
               
               
