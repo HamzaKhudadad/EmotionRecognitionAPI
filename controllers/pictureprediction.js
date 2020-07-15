@@ -30,7 +30,7 @@ module.exports = function(_,formidable){
                 console.log("renamed");
                 console.log(file.name);
               if(err,res) {  console.log(err);
-              return res.render('error');}
+              //return res.render('error');}
              
               
 
@@ -60,7 +60,7 @@ module.exports = function(_,formidable){
 
             form.on('error', (err,res) => {
               console.log("form error");
-              return res.render('error');
+              //return res.render('error');
               
               
             });
