@@ -20,12 +20,14 @@ module.exports = function(_,formidable){
       },
    
         pred: function(req, res) {
+          console.log("in predict function");
         
             const form = new formidable.IncomingForm();
             form.uploadDir = path.join(__dirname,'../public/files');
 
             form.on('file',(field, file) => {
               fs.rename(file.path, path.join(form.uploadDir, file.name), (err) => {
+                console.log("renamed");
               if(err,res) {return res.render('error');}
              
               
