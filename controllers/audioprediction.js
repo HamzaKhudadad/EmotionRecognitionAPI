@@ -33,7 +33,7 @@ module.exports = function(_,formidable){
 
           form.on('file',(field, file) => {
             fs.rename(file.path, path.join(form.uploadDir, file.name), (err) => {
-              if(err,res) {return res.render('error');}
+              if(err) {  console.log(err);}
          
             
             
@@ -51,7 +51,7 @@ module.exports = function(_,formidable){
        
            
           PythonShell.run('audioPred.py', options, function (err, results) {
-            if(err,res) {return res.render('error');}
+            if(err) {  console.log(err);}
             // results is an array consisting of messages collected during execution
             console.log('results: %j', results[0]);
             res.render('audio', { data: results,file:  file.name  });
@@ -63,8 +63,8 @@ module.exports = function(_,formidable){
         })
       })
 
-        form.on('error', (err,res) => {
-          return res.render('error');
+        form.on('error', (err) => {
+          if(err) {  console.log(err);}
           
           
         });
