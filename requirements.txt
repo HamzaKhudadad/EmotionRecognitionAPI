@@ -11,3 +11,4 @@ psycopg2==2.8.3
 opencv-python
 scipy==1.1.0
 matplotlib
+Pillow 
