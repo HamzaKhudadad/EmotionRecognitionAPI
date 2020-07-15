@@ -37,6 +37,10 @@ CSS INDEX
 2. Theme Default CSS
 --------------------*/
 
+
+
+
+
 a {
     text-decoration: none;
     outline: none;
@@ -757,6 +761,40 @@ preloader
     -webkit-animation-delay: 0.9s;
     animation-delay: 0.9s;
 }
+
+
+
+#circle1 {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+	width: 150px;
+    height: 150px;	
+}
+#circle2 {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+	width: 150px;
+    height: 150px;	
+}
+
+.loader {
+    width: calc(100% - 0px);
+	height: calc(100% - 0px);
+	border: 8px solid #515656;
+	border-top: 8px solid #478fc2;
+	border-radius: 50%;
+	animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+100% {transform: rotate(360deg);}
+} 
 
 @-webkit-keyframes sk-foldCubeAngle {
     0%,

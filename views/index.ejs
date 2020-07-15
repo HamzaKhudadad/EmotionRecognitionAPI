@@ -10,6 +10,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
     <title>Emotron</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#b1").click(function(){
+    $("#circle1").css("display", "block");
+    $("#b1").css("display", "none");
+  });
+
+  $("#b2").click(function(){
+    $("#circle2").css("display", "block");
+    $("#b2").css("display", "none");
+  });
+
+
+});
+</script>
+</head>
+
+
     <!-- Place favicon.ico in the root directory -->
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
@@ -29,7 +49,9 @@
         <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-</head>
+
+
+
 
 <body data-spy="scroll" data-target="#primary-menu">
 
@@ -41,6 +63,9 @@
             <div class="sk-cube3 sk-cube"></div>
         </div>
     </div>
+
+ 
+
     <!--Mainmenu-area-->
     <div class="mainmenu-area" data-spy="affix" data-offset-top="100">
         <div class="container">
@@ -95,12 +120,24 @@
                         <form action="/pictureprediction" enctype="multipart/form-data" method="post">
                                  
                             <input type="file" name="upload" id="upload-input" > <br>
-                            <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                            <button id="b1" type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
                             <!-- <input type="submit"> -->
                             
                            
                              
                          </form>
+
+                         <div id="circle1">
+                            <div class="loader">
+                              <div class="loader">
+                                  <div class="loader">
+                                     <div class="loader"> 
+                          
+                                    </div> 
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
 
                     </div>
                 
@@ -118,12 +155,25 @@
                             <form action="/audioprediction" enctype="multipart/form-data" method="post">
                                  
                                 <input type="file" name="upload" id="upload-input" > <br>
-                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                                <button id="b2" type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
                                 <!-- <input type="submit"> -->
                                 
                                
                                  
                              </form>
+
+                             <div id="circle2">
+                                <div class="loader">
+                                  <div class="loader">
+                                      <div class="loader">
+                                         <div class="loader">
+                              
+                                         </div>
+                                      </div>
+                                  </div>
+                                </div>
+                              </div>
+
                         </div>
                          </a>
                 </div>

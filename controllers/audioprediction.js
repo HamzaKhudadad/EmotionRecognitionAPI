@@ -53,7 +53,7 @@ module.exports = function(_,formidable){
           PythonShell.run('audioPred.py', options, function (err, results) {
             if(err) {  console.log(err);}
             // results is an array consisting of messages collected during execution
-            console.log('results: %j', results[0]);
+            console.log('results: %j', results);
             res.render('audio', { data: results,file:  file.name  });
            // res.send(results)
           });
