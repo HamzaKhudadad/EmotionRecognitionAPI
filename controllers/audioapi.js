@@ -11,18 +11,11 @@ module.exports = function(_,formidable){
     return {
         SetRouting: function(router){
         
-            router.post('/audioprediction', this.pred);
-            router.get('/audioprediction', this.Page);
+            router.post('/audioapi', this.pred);
+
         },
         
          
-        Page: function(req, res){
-    
-          return res.render('audio');
-      },
-
-
-
 
         pred: function(req, res) {
        
@@ -33,9 +26,9 @@ module.exports = function(_,formidable){
 
           form.on('file',(field, file) => {
             fs.rename(file.path, path.join(form.uploadDir, file.name), (err) => {
-              if(err,res) {return res.render('error');}
-         
-            
+            if(err) throw err;
+            console.log("renamed");
+            console.log( file.name);
             
 
             let options = {
@@ -51,11 +44,11 @@ module.exports = function(_,formidable){
        
            
           PythonShell.run('audioPred.py', options, function (err, results) {
-            if(err,res) {return res.render('error');}
+            if (err) throw err;
             // results is an array consisting of messages collected during execution
             console.log('results: %j', results[0]);
-            res.render('audio', { data: results,file:  file.name  });
-           // res.send(results)
+            res.send(results)
+
           });
 
 
@@ -63,9 +56,9 @@ module.exports = function(_,formidable){
         })
       })
 
-        form.on('error', (err,res) => {
+        form.on('error', (err) => {
           return res.render('error');
-          
+          console.log("error");
           
         });
 
@@ -91,5 +84,3 @@ module.exports = function(_,formidable){
 
 
     }
-
-

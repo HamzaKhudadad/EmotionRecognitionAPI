@@ -75,5 +75,4 @@ for face_coordinates in faces:
     emotion_label_arg = np.argmax(emotion_classifier.predict(gray_face))
     emotion_text = emotion_labels[emotion_label_arg]
 
-print(gender_text)
 print(emotion_text)

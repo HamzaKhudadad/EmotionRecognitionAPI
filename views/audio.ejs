@@ -1,0 +1,147 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+  
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
+    <!-- Plugin-CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/themify-icons.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <!-- Main-Stylesheets -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <script src="/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    
+</head>
+
+<body data-spy="scroll" data-target="#primary-menu">
+
+    <div class="preloader">
+        <div class="sk-folding-cube">
+            <div class="sk-cube1 sk-cube"></div>
+            <div class="sk-cube2 sk-cube"></div>
+            <div class="sk-cube4 sk-cube"></div>
+            <div class="sk-cube3 sk-cube"></div>
+        </div>
+    </div>
+    <!--Mainmenu-area-->
+    <div class="mainmenu-area" data-spy="affix" data-offset-top="100">
+        
+            <!--Logo-->
+            <div class="navbar navbar-light" style="background-color: #478fc2;border-radius: 0px;">
+             
+                <a href="/" class="navbar-brand logo">
+                    <h2 style="margin-left:20px">Emotron</h2>
+                </a>
+            </div>
+            <!--Logo/-->
+     
+       
+    </div>
+    <!--Mainmenu-area/-->
+
+
+
+    <!--Header-area-->
+    <!-- <header class="header-area overlay full-height relative v-center" id="home-page">
+        <div class="absolute anlge-bg"></div>
+      
+    </header> -->
+    <!--Header-area/-->
+
+
+
+    <!--Feature-area-->
+    <section class="gray-bg section-padding" id="service-page">
+      
+                 
+                      
+                        <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
+                            <div class="page-title">
+                                <h2>Upload your Audio and get prediction</h2>
+                                
+                            </div>
+                        </div>
+                
+
+                       
+                        <div class="container" >
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-4 text-center">
+                                    <h4>Upload your audio</h4>
+                                    <form action="/audioprediction" enctype="multipart/form-data" method="post">
+                                        <input type="file" name="upload" id="upload-input" >
+                                        <br>
+                                        <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                                     </form>
+    
+                                     
+    
+
+                                </div>
+
+                                <div class="col-xs-12 col-sm-4 text-center">
+                                    <h4>Your uploaded audio</h4>
+                                     <audio controls>
+                                     <source src="/files/<%=file %>" type="audio/wav">
+                                     </audio>
+    
+                                    <p><%=file %></p><br>
+
+                                     
+  
+                                </div>
+                                
+                                <div class="col-xs-12 col-sm-4 text-center">
+                                   
+
+                                     <h4>The Emotion in your audio is</h4>
+                                    <h1> "<%=data %>"</h1> </div>
+  
+                                </div>
+                            </div>
+                            
+                            
+    </section>
+    
+
+
+
+
+
+
+
+
+
+
+
+    <!--Vendor-JS-->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <!--Plugin-JS-->
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/contact-form.js"></script>
+    <script src="js/jquery.parallax-1.1.3.js"></script>
+    <script src="js/scrollUp.min.js"></script>
+    <script src="js/magnific-popup.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <!--Main-active-JS-->
+    <!-- <script src="/js/upload.js"></script>    -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
+const ejs = require('ejs');
 const http = require('http');
 const cookieParser = require('cookie-parser');
 
@@ -13,7 +13,7 @@ const cors = require('cors');
 
 const container = require('./container');
 
-container.resolve(function(picture,_,audioprediction){
+container.resolve(function(pictureprediction,_,audioprediction,home,audioapi,pictureapi){
 
     
     const app = SetupExpress();
@@ -30,9 +30,11 @@ container.resolve(function(picture,_,audioprediction){
 
         //Setup router
         const router = require('express-promise-router')();
-        picture.SetRouting(router);
+        pictureprediction.SetRouting(router);
         audioprediction.SetRouting(router);
-
+        home.SetRouting(router);
+        pictureapi.SetRouting(router);
+        audioapi.SetRouting(router);
 
         app.use(cors());
 
@@ -53,7 +55,7 @@ container.resolve(function(picture,_,audioprediction){
 
         app.use(express.static('public'));
         app.use(cookieParser());
-    
+        app.set('view engine', 'ejs');
         app.use(bodyParser.json());
         app.use(bodyParser.urlencoded({extended: true}));
 
