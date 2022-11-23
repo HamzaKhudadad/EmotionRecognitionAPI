@@ -43,6 +43,6 @@
     "passport-local": "^1.0.0",
     "python-shell": "^1.0.8",
     "read-chunk": "^3.2.0",
-    "socket.io": "^2.2.0"
+    "socket.io": "^2.5.0"
   }
 }
